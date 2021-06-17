@@ -12,7 +12,6 @@
         <module>spark3-LiJiaHeng</module>
         <module>spark3-ZhaoFuQiang</module>
         <module>Resource-Dir</module>
-        <module>spak3-ChenMing</module>
     </modules>
     <properties>
         <spark-core_version>2.12</spark-core_version>
