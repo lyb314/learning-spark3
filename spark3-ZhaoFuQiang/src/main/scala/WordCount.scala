@@ -7,12 +7,11 @@ object WordCount {
 
     val sc = new SparkContext(conf)
     val path = this.getClass.getResource("/").getPath()
-    val inputStream: RDD[String] = sc.textFile(path + "log4j.properties")
-    val result: String = inputStream.flatMap(_.split(" "))
+    val inputSteam  = sc.textFile(path + "log4j.properties")
+      .flatMap(_.split("\\s"))
       .map((_, 1))
       .reduceByKey(_ + _)
-      .collect().mkString(",")
-    println(result)
-
+    val result = inputSteam.collect()
+    result.foreach(println)
   }
 }
