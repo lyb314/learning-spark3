@@ -17,6 +17,7 @@ object WordCount {
 
     //Shut down the SparkContext.，关闭执行环境
     //stop是停止appication的意思，spark是做垃圾回收，防止资源泄露。
+    //关闭 Spark 连接
 
     sc.stop()
   }
