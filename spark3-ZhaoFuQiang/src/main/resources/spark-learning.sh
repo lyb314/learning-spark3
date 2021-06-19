@@ -31,12 +31,9 @@ Spark Executor 是集群中工作节点（Worker）中的一个 JVM 进程，负
 上继续运行。
 Executor 有两个核心功能：
 ➢ 负责运行组成 Spark 应用的任务，并将结果返回给驱动器进程
-➢ 它们通过自身的块管理器（Block Manager）为用户程序中要求缓存的 RDD 提供内存
-式存储。RDD 是直接缓存在 Executor 进程内的，因此任务可以在运行时充分利用缓存
-数据加速运算。
+➢ 它们通过自身的块管理器（Block Manager）为用户程序中要求缓存的 RDD 提供内存式存储。RDD 是直接缓存在 Executor 进程内的，因此任务可以在运行时充分利用缓存数据加速运算。
 4.2.3 Master & Worker
-Spark 集群的独立部署环境中，不需要依赖其他的资源调度框架，自身就实现了资源调
-度的功能，所以环境中还有其他两个核心组件：Master 和 Worker，这里的 Master 是一个进
+Spark 集群的独立部署环境中，不需要依赖其他的资源调度框架，自身就实现了资源调度的功能，所以环境中还有其他两个核心组件：Master 和 Worker，这里的 Master 是一个进
 程，主要负责资源的调度和分配，并进行集群的监控等职责，类似于 Yarn 环境中的 RM, 而
 Worker 呢，也是进程，一个 Worker 运行在集群中的一台服务器上，由 Master 分配资源对
 数据进行并行的处理和计算，类似于 Yarn 环境中 NM。 4.2.4 ApplicationMaster
@@ -45,6 +42,7 @@ Hadoop 用户向 YARN 集群提交应用程序时,提交程序中应该包含 Ap
 个任务的执行，跟踪整个任务的状态，处理任务失败等异常情况。
 说的简单点就是，ResourceManager（资源）和 Driver（计算）之间的解耦合靠的就是
 ApplicationMaster。
+
 4.3 核心概念
 4.3.1 Executor 与 Core
 Spark Executor 是集群中运行在工作节点（Worker）中的一个 JVM 进程，是整个集群中
