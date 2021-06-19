@@ -14,12 +14,13 @@
         <module>Resource-Dir</module>
         <module>spak3-ChenMing</module>
     </modules>
+
     <properties>
         <spark-core_version>2.12</spark-core_version>
         <spark-version>3.0.0</spark-version>
         <spark-yarn_version>2.12</spark-yarn_version>
         <spark-sql_version>2.12</spark-sql_version>
-        <mysql-connector-java-version>5.1.27</mysql-connector-java-version>
+        <mysql-connector-java-version>8.0.11</mysql-connector-java-version>
         <hive-exec-version>1.2.1</hive-exec-version>
         <spark-streaming_version>2.12</spark-streaming_version>
         <spark-streaming-kafka-version>0-10_2.12</spark-streaming-kafka-version>
@@ -28,17 +29,21 @@
         <scala-maven-plugin-version>3.4.6</scala-maven-plugin-version>
         <maven-assembly-plugin-version>3.0.0</maven-assembly-plugin-version>
     </properties>
+
     <dependencies>
+
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-core_${spark-core_version}</artifactId>
             <version>${spark-version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-yarn_${spark-yarn_version}</artifactId>
             <version>${spark-version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-sql_${spark-sql_version}</artifactId>
@@ -56,23 +61,28 @@
             <artifactId>spark-streaming_${spark-streaming_version}</artifactId>
             <version>${spark-version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-streaming-kafka-${spark-streaming-kafka-version}</artifactId>
             <version>${spark-version}</version>
         </dependency>
+
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
             <version>${jackson-core-version}</version>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>${druid-version}</version>
         </dependency>
+
     </dependencies>
+
     <build>
         <plugins>
             <!-- 该插件用于将 Scala 代码编译成 class 文件 -->
@@ -89,6 +99,7 @@
                     </execution>
                 </executions>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
@@ -108,6 +119,7 @@
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
 </project>
