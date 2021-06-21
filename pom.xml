@@ -24,7 +24,6 @@
         <hive-exec-version>1.2.1</hive-exec-version>
         <spark-streaming_version>2.12</spark-streaming_version>
         <spark-streaming-kafka-version>0-10_2.12</spark-streaming-kafka-version>
-        <jackson-core-version>2.10.1</jackson-core-version>
         <druid-version>1.1.10</druid-version>
         <scala-maven-plugin-version>3.4.6</scala-maven-plugin-version>
         <maven-assembly-plugin-version>3.0.0</maven-assembly-plugin-version>
@@ -66,12 +65,6 @@
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-streaming-kafka-${spark-streaming-kafka-version}</artifactId>
             <version>${spark-version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-core</artifactId>
-            <version>${jackson-core-version}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->

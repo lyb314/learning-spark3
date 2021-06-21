@@ -8,7 +8,7 @@ object TransformOperator {
   def main(args: Array[String]): Unit = {
     val conf: SparkConf = new SparkConf().setMaster("local[*]").setAppName("TransformOperator")
 
-    val sc = new SparkContext(conf)
+    val sc:SparkContext = new SparkContext(conf)
     val url: URL = this.getClass.getResource("/LoginLog.csv")
     val inputStream: RDD[String] = sc.textFile(url.getPath)
     val mapLoginlog: RDD[LoginLog] = inputStream.map(line => {
