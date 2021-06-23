@@ -1,18 +1,37 @@
+# 告诉EditorConfig插件，这是根文件，不用继续往上查找
 root = true
 
+# 匹配全部文件
 [*]
+
+# 设置字符集
 charset = utf-8
+
+# 结尾换行符，可选"lf"、"cr"、"crlf"
 end_of_line = lf
+
+# 删除一行中的前后空格
 insert_final_newline = true
 
+# 匹配.java 和 xml 结尾的文件
 [*.{java,xml}]
 indent_style = tab
 indent_size = 4
 
+# 匹配scala结尾的文件
 [*.scala]
-indent_style = space
-indent_size = 2
+# 缩进风格，可选"space"、"tab"
 
+indent_style = tab
+
+#缩进的空格数
+indent_size = 4
+
+# 匹配py结尾的文件
 [*.py]
-indent_style = space
+
+# 缩进风格，可选"space"、"tab"
+indent_style = tab
+
+# 缩进的空格数
 indent_size = 4
